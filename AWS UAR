@@ -1,0 +1,249 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4",
+    "body": [
+        {
+            "type": "TextBlock",
+            "wrap": true,
+            "text": "**AWS User Access Review**",
+            "size": "ExtraLarge"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Hello [**User**], your workspace is completing their routine **review of access** to **AWS**",
+            "separator": true,
+            "wrap": true,
+            "color": "Default"
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "choices": [
+                {
+                    "title": "Yes - I use this tool more than once per week",
+                    "value": "1"
+                },
+                {
+                    "title": "Yes - I use this tool less than once per week",
+                    "value": "2"
+                },
+                {
+                    "title": "Yes - I use this tool occasionally or to support a former role",
+                    "value": "3"
+                },
+                {
+                    "title": "Yes - I use this tool infrequently but find access beneficial",
+                    "value": "4"
+                },
+                {
+                    "title": "No - I do not use this tool",
+                    "value": "5"
+                },
+                {
+                    "title": "No - I don't know what this tool is",
+                    "value": "6"
+                },
+                {
+                    "title": "Other Reason ",
+                    "value": "7"
+                }
+            ],
+            "placeholder": "Select an option",
+            "label": "Do you still need access to AWS?",
+            "isRequired": true,
+            "id": "abc1"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Our Records indicate that you have the following **active entitlements** in **[service name]** please select whether or not you need **continued access** to the entitlements listed below.",
+            "separator": true,
+            "wrap": true,
+            "spacing": "ExtraLarge"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "**Entitlement**",
+                            "wrap": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "**Response**",
+                            "wrap": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Admin",
+                            "wrap": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Input.ChoiceSet",
+                            "choices": [
+                                {
+                                    "title": "Need Access",
+                                    "value": "Choice 1"
+                                },
+                                {
+                                    "title": "Do Not Need Access",
+                                    "value": "Choice 2"
+                                }
+                            ],
+                            "placeholder": "Select an option",
+                            "id": "1"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "DevOps",
+                            "wrap": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Input.ChoiceSet",
+                            "choices": [
+                                {
+                                    "title": "Need Access",
+                                    "value": "Choice 1"
+                                },
+                                {
+                                    "title": "Do Not Need Access",
+                                    "value": "Choice 2"
+                                }
+                            ],
+                            "placeholder": "Select an option",
+                            "id": "2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Developer",
+                            "wrap": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Input.ChoiceSet",
+                            "choices": [
+                                {
+                                    "title": "Need Access",
+                                    "value": "Choice 1"
+                                },
+                                {
+                                    "title": "Do Not Need Access",
+                                    "value": "Choice 2"
+                                }
+                            ],
+                            "placeholder": "Select an option",
+                            "id": "3"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Audit",
+                            "wrap": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Input.ChoiceSet",
+                            "choices": [
+                                {
+                                    "title": "Need Access",
+                                    "value": "Choice 1"
+                                },
+                                {
+                                    "title": "Do Not Need Access",
+                                    "value": "Choice 2"
+                                }
+                            ],
+                            "placeholder": "Select an option",
+                            "id": "4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Submit Responses"
+                }
+            ],
+            "horizontalAlignment": "Right"
+        }
+    ]
+}
